@@ -1,5 +1,29 @@
 .App {
   text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+  margin: 20px;
+  background: rgb(219, 219, 219);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+}
+
+#todo{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+h1{
+  font-size: 3.2rem;
+  font-family: serif;
 }
 
 .App-logo {
@@ -35,4 +59,62 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.btn{
+  padding: 10px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  background: rgb(0, 255, 42);
+  color: white;
+  font-size: bold;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.btn:hover{
+  background: rgb(0, 163, 27);
+  font-size: 1.4rem;
+  text-decoration: underline;
+}
+
+.counters{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 80%;
+}
+
+#todo-list{
+  list-style: none;
+  width: 80%;
+}
+
+.todo-item{
+  width: 100%;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 1.2rem;
+  font-style: italic;
+  padding: 10px;
+  border-top: 2px dotted silver;
+  border-bottom: 2px dotted silver;
+}
+
+.todo-item input{
+  height: 20px;
+  width: 20px;
+  margin: 10px;
+}
+
+.todo-item span{
+  margin: 10px;
+}
+
+.todo-item button{
+  background: tomato;
+}
+
+.todo-item button:hover{
+  background: red;
 }

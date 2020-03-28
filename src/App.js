@@ -5,17 +5,17 @@ import "./App.css";
 let id = 0;
 
 const Todo = params => (
-  <li>
+  <li class="todo-item">
     <input
       type="checkbox"
-      styles={{ textDecoration: params.todo.checked ? 'line-through' : 'none' }}
       checked={params.todo.checked}
       onChange={params.onToggle}
     />
-    <span>{params.todo.text}</span>
-    <button onClick={params.onDelete}>Delete</button>
+    <span style={{ textDecoration: params.todo.checked ? 'line-through' : 'none' }}>{params.todo.text}</span>
+    <button class="btn" onClick={params.onDelete}>Delete</button>
   </li>
 );
+
 
 class App extends React.Component {
   constructor() {
@@ -52,8 +52,8 @@ class App extends React.Component {
 
   render() {
     return (
-      <div>
-        <button onClick={() => this.addTodo()}>Add Todo</button>
+      <div id="todo">
+        <button class="btn" onClick={() => this.addTodo()}>Add Todo</button>
         <div class="counters">
           <h3>Total Todo's: {this.state.todos.length}</h3>
           <h3>
@@ -61,7 +61,7 @@ class App extends React.Component {
             {this.state.todos.filter(todo => !todo.checked).length}
           </h3>
         </div>
-        <ul>
+        <ul id="todo-list">
           {this.state.todos.map(todo => (
             <Todo
               onToggle={() => this.toggleTodo(todo.id)}
